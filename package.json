@@ -1,0 +1,36 @@
+{
+  "name": "mocha-esm-loader",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "This module helps running Mocha programmatically when writing tests in an ES Module project.",
+  "main": "mocha-esm-loader.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "mkdir -p build && cp -n README.md package.json *.js build/",
+    "test:build": "npm run build && cp -r test build/ && cd build && npm test && rm -rf test"
+  },
+  "keywords": [
+    "mocha",
+    "esm",
+    "programmatically",
+    "mocha-multi"
+  ],
+  "author": "James Mortensen",
+  "license": "MIT",
+  "homepage": "https://github.com/jamesmortensen/mocha-esm-loader/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesmortensen/mocha-esm-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamesmortensen/mocha-esm-loader/issues"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "mocked-mocha-runner": "^0.0.1"
+  },
+  "dependencies": {
+    "glob": "^10.2.6"
+  }
+}
